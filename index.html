@@ -1,0 +1,131 @@
+<!-- FAQ estilo moderno tipo Elfsight con fuente Poppins -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  .faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #eee;
+  }
+
+  .faq-question {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+  }
+
+  .faq-question:hover {
+    background-color: #f7f7f7;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-bottom: 20px;
+  }
+
+  .arrow {
+    font-size: 18px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .arrow {
+    transform: rotate(90deg);
+  }
+</style>
+
+<div class="faq-container">
+  <div class="faq-item">
+    <div class="faq-question">
+      What areas do you serve?
+      <span class="arrow">&#9654;</span>
+    </div>
+    <div class="faq-answer">
+      We proudly serve all of Rockland County, including the towns of Stony Point, Haverstraw, Ramapo, Clarkstown, and Orangetown.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      What makes First Choice SV INC different from other property management companies?
+      <span class="arrow">&#9654;</span>
+    </div>
+    <div class="faq-answer">
+      We stand out for our excellent answering service, bilingual support, quick response times, and competitive pricing. We’re committed to serving both owners and tenants equally.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      Do you offer emergency or weekend services?
+      <span class="arrow">&#9654;</span>
+    </div>
+    <div class="faq-answer">
+      Yes! We offer emergency services and are available on-call during weekends to ensure your property and tenants are always supported.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      What services do you provide for property owners?
+      <span class="arrow">&#9654;</span>
+    </div>
+    <div class="faq-answer">
+      We offer tenant placement, rent collection, general property management, and owner-requested maintenance—tailored to fit your property's needs.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      How can potential tenants view available apartments?
+      <span class="arrow">&#9654;</span>
+    </div>
+    <div class="faq-answer">
+      Soon, you’ll be able to browse available apartments right here on our website. Stay tuned or contact us directly for current listings.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      What are your customer service hours?
+      <span class="arrow">&#9654;</span>
+    </div>
+    <div class="faq-answer">
+      Our customer service line is available Monday through Friday from 9 AM to 5 PM, and we offer 24/7 support on weekends.
+    </div>
+  </div>
+</div>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
